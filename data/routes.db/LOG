@@ -1,0 +1,52 @@
+=============== Aug 28, 2017 (EDT) ===============
+15:54:59.279935 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:54:59.280628 db@open opening
+15:54:59.281192 version@stat F·[] S·0B[] Sc·[]
+15:54:59.281482 db@janitor F·2 G·0
+15:54:59.281519 db@open done T·880.092µs
+=============== Aug 28, 2017 (EDT) ===============
+15:55:19.452937 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:55:19.453839 version@stat F·[] S·0B[] Sc·[]
+15:55:19.453891 db@open opening
+15:55:19.453996 journal@recovery F·1
+15:55:19.454526 journal@recovery recovering @1
+15:55:19.455189 version@stat F·[] S·0B[] Sc·[]
+15:55:19.456520 db@janitor F·2 G·0
+15:55:19.456571 db@open done T·2.664532ms
+=============== Aug 28, 2017 (EDT) ===============
+15:56:18.215501 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:56:18.215916 version@stat F·[] S·0B[] Sc·[]
+15:56:18.215960 db@open opening
+15:56:18.216048 journal@recovery F·1
+15:56:18.216514 journal@recovery recovering @2
+15:56:18.217223 memdb@flush created L0@4 N·2 S·204B ":1,v1":"Bas..epo,v2"
+15:56:18.217736 version@stat F·[1] S·204B[204B] Sc·[0.25]
+15:56:18.219394 db@janitor F·3 G·0
+15:56:18.219429 db@open done T·3.452601ms
+=============== Aug 28, 2017 (EDT) ===============
+15:57:25.239221 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:57:25.240323 version@stat F·[1] S·204B[204B] Sc·[0.25]
+15:57:25.240359 db@open opening
+15:57:25.240513 journal@recovery F·1
+15:57:25.241570 journal@recovery recovering @5
+15:57:25.242060 version@stat F·[1] S·204B[204B] Sc·[0.25]
+15:57:25.243274 db@janitor F·3 G·0
+15:57:25.243309 db@open done T·2.921816ms
+=============== Aug 28, 2017 (EDT) ===============
+16:06:43.857765 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:06:43.858304 version@stat F·[1] S·204B[204B] Sc·[0.25]
+16:06:43.858327 db@open opening
+16:06:43.858430 journal@recovery F·1
+16:06:43.858895 journal@recovery recovering @7
+16:06:43.859621 version@stat F·[1] S·204B[204B] Sc·[0.25]
+16:06:43.860656 db@janitor F·3 G·0
+16:06:43.860674 db@open done T·2.339147ms
+=============== Aug 28, 2017 (EDT) ===============
+16:07:05.748239 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:07:05.750257 version@stat F·[1] S·204B[204B] Sc·[0.25]
+16:07:05.750392 db@open opening
+16:07:05.750853 journal@recovery F·1
+16:07:05.752353 journal@recovery recovering @9
+16:07:05.753333 version@stat F·[1] S·204B[204B] Sc·[0.25]
+16:07:05.756820 db@janitor F·3 G·0
+16:07:05.756877 db@open done T·6.461054ms
