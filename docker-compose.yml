@@ -1,0 +1,6 @@
+go-links:
+    build: .
+    volumes: 
+      - .:/home/go-links/go-links
+    ports:
+      - 8067:8067
