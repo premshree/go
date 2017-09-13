@@ -1,16 +1,10 @@
-FROM alpine
+FROM golang:1.8-alpine
 
-ENV GOPATH /go
 COPY . /go/src/github.shuttercorp.net/shutterstock/go-links
-RUN apk update \
-  && apk add go git musl-dev \
-  && apk del go git musl-dev \
-  && rm -rf /var/cache/apk/* \
-  && rm -rf /go/src /go/pkg \
-  && mkdir /data
+RUN apk add --no-cache --update git
 
-RUN go install https://github.shuttercorp.net/shutterstock/go-links
+EXPOSE 8067
 
 ENTRYPOINT /go/bin/go-links
 
-EXPOSE 8067
+RUN go install github.shuttercorp.net/shutterstock/go-links
