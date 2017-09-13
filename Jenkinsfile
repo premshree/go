@@ -25,7 +25,10 @@ sstkNode([ saveWorkspace: false ], 'build', [ alpineContainer ]) {
   container(alpineContainer.getName()) {
     // execute build and test steps
     stage('build') {
-        sh('apk add --update git && go get && go build')
+        sh('apk add --update git')
+        sh('mkdir -p /go/src/github.shuttercorp.net/shutterstock/go-links')
+        sh('cp -r $(pwd)/* /go/src/github.shuttercorp.net/shutterstock/go-links')
+        sh('cd /go/src/github.shuttercorp.net/shutterstock/go-links && go get && go build')
     }
   }
 
