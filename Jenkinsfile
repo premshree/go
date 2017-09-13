@@ -28,7 +28,7 @@ sstkNode([ saveWorkspace: false ], 'build', [ alpineContainer ]) {
         sh('apk add --update git')
         sh('mkdir -p /go/src/github.shuttercorp.net/shutterstock/go-links')
         sh('cp -r $(pwd)/* /go/src/github.shuttercorp.net/shutterstock/go-links')
-        sh('cd /go/src/github.shuttercorp.net/shutterstock/go-links && go get && go build')
+        sh('JENKINS_DIR="$(pwd)" && cd /go/src/github.shuttercorp.net/shutterstock/go-links && go get && go build && cp go-links $JENKINS_DIR')
     }
   }
 
