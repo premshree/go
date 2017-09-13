@@ -3,7 +3,7 @@
 import static com.shutterstock.Container.*
 import static com.shutterstock.PipelineOptions.*
 
-def s = sstk(this)
+def s = sstk(this, 'pipeline', '2.0')
 def g = sstk(this, 'github-utils')
 
 def alpineContainer = fromDockerHub('golang:1.8-alpine')
