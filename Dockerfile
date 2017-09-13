@@ -1,10 +1,6 @@
-FROM golang:1.8-alpine
-
-COPY . /go/src/github.shuttercorp.net/shutterstock/go-links
-RUN apk add --no-cache --update git
+FROM alpine:3.4
 
 EXPOSE 8067
+ENTRYPOINT "/go-links"
 
-ENTRYPOINT /go/bin/go-links
-
-RUN go install github.shuttercorp.net/shutterstock/go-links
+COPY go-links /
