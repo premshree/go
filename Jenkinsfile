@@ -25,7 +25,7 @@ sstkNode([ saveWorkspace: false ], 'build', [ alpineContainer ]) {
   container(alpineContainer.getName()) {
     // execute build and test steps
     stage('build') {
-        sh('go get && go build')
+        sh('apk add --update git && go get && go build')
     }
   }
 
