@@ -39,7 +39,7 @@ sstkNode([ saveWorkspace: true, saveWorkspaceIncludes: "deployment/*" ], 'build'
 
 sstkNode([:], 'dev', []) {
     s.sstkStage(type: 'devDeploy', name: 'dev deploy') {
-        String appFqdn = s.deployGenericHttp('deployment')
+        String appFqdn = s.deployGenericHttp('deployment', false)
         appUrl = "http://${appFqdn}"
         s.awaitURLReadiness("${appUrl}/ready")
     }
@@ -50,7 +50,7 @@ sstkNode([:], 'dev', []) {
 
 sstkNode([:], 'qa', []) {
     s.sstkStage(type: 'qaDeploy', name: 'QA deploy') {
-        String appFqdn = s.deployGenericHttp('deployment')
+        String appFqdn = s.deployGenericHttp('deployment', false)
         appUrl = "http://${appFqdn}"
         s.awaitURLReadiness("${appUrl}/ready")
     }
@@ -61,7 +61,7 @@ sstkNode([:], 'qa', []) {
 
 sstkNode([:], 'prod', []) {
     s.sstkStage(type: 'prodDeploy', name: 'Prod deploy') {
-        String appFqdn = s.deployGenericHttp('deployment')
+        String appFqdn = s.deployGenericHttp('deployment', false)
         appUrl = "http://${appFqdn}"
         s.awaitURLReadiness("${appUrl}/ready")
     }
