@@ -37,7 +37,7 @@ sstkNode([ saveWorkspace: true, saveWorkspaceIncludes: "deployment/*" ], 'build'
   }
 }
 
-sstkNode([:], 'dev', [ alpineContainer ]) {
+sstkNode([:], 'dev', []) {
     s.sstkStage(type: 'devDeploy', name: 'deploy') {
         String appFqdn = s.deployGenericHttp('deployment')
         appUrl = "http://${appFqdn}"
