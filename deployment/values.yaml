@@ -6,7 +6,7 @@ global:
   port: &PORT "3000"
 
 image:
-  repo: "http://docker-artifactory.shuttercorp.net/shutterstock/go-links"
+  repo: "docker-artifactory.shuttercorp.net/shutterstock/go-links"
 deployment:
   port: *PORT
   replicaCount: 1
