@@ -36,3 +36,11 @@ sstkNode([ saveWorkspace: false ], 'build', [ alpineContainer ]) {
       s.buildAndPublishImage([ noCache: true ])
   }
 }
+
+sstkNode([ saveWorkspace: false ], 'dev', [ alpineContainer ]) {
+    s.sstkStage(type: 'devDeploy', name: 'deploy') {
+        String appFqdn = s.deployGenericHttp('deployConfig')
+        appUrl = "http://${appFqdn}"
+        s.awaitURLReadiness("${appUrl}/ready")
+    }
+}
