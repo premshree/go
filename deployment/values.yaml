@@ -14,3 +14,10 @@ deployment:
     requests:
       cpu: 250m
       memory: 128Mi
+
+  probes:
+    # Configuration for readiness and liveness probes.
+    liveness:
+      path: /healthz
+    readiness:
+     path: /healthz
