@@ -13,7 +13,7 @@ alpineContainer.useEnvVars([
   NPM_CONFIG_LOGLEVEL: 'warn'
 ])
 
-sstkNode([ saveWorkspace: false ], 'build', [ alpineContainer ]) {
+sstkNode([ saveWorkspace: true, saveWorkspaceIncludes: "deployment/*" ], 'build', [ alpineContainer ]) {
   // fetch the code and initialize the GitHub helper
   checkout scm
 
@@ -37,7 +37,7 @@ sstkNode([ saveWorkspace: false ], 'build', [ alpineContainer ]) {
   }
 }
 
-sstkNode([ restoreWorkspace: false ], 'dev', [ alpineContainer ]) {
+sstkNode([:], 'dev', [ alpineContainer ]) {
     s.sstkStage(type: 'devDeploy', name: 'deploy') {
         String appFqdn = s.deployGenericHttp('deployment')
         appUrl = "http://${appFqdn}"
