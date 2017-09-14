@@ -2,13 +2,10 @@
 # for the generichttp chart:
 #   >> helm inspect sstk-apps/generichttp
 
-global:
-  port: &PORT "3000"
-
 image:
   repo: "docker-artifactory.shuttercorp.net/shutterstock/go-links"
 deployment:
-  port: *PORT
+  port: 8067
   replicaCount: 1
   resources:
     limits:
@@ -17,11 +14,3 @@ deployment:
     requests:
       cpu: 250m
       memory: 128Mi
-  envVars:
-    PORT: *PORT
-    LOG_LEVEL: DEBUG
-
-service:
-  # Configuration for the Kubernetes service and AWS ELB.
-  type: LoadBalancer
-  availability: internal
